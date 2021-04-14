@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+  </head>
+
+<body>
+  <h1 class="book-head">Books</h1>
+</body>
+<table>
+  <thead>
+    <th class="book-heading">title</th>
+    <th class="book-heading">body</th>
+      <div class="book-box"></div>
+      <div class="book-text"></div>
+
+  </thead>
+
+  <tbody>
+  </tbody>
+
+
+  <h3>New book</h3>
+  <%= form_with model:@book, url:'/new', local:true do |f| %>
+
+  <h5>title</h5>
+  <%= f.text_field :title %>
+
+  <h5>body</h5>
+  <%= f.text_area :body %>
+
+  <%= f.submit '投稿' %>
+ <% end %>
+
+ </table>
+</html>
